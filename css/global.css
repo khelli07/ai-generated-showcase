@@ -1,0 +1,54 @@
+/* Reset some default styles to ensure consistency across browsers */
+body,
+h1,
+h2,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Font Family */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f1f1f1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+/* Header styles */
+header {
+  background-color: #0984e3; /* Vibrant blue color for the header */
+  color: #fff; /* White text color */
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: #fff; /* White navigation link color */
+}
+
+/* Main content styles */
+main {
+  padding: 2rem;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #34495e; /* Dark gray background for footer */
+  color: #fff;
+}

@@ -1,0 +1,53 @@
+/* CSS styles specific to photo_detail.html */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  background-color: #f1f1f1;
+  margin: 0;
+}
+
+main {
+  padding: 2rem;
+}
+
+.photo-detail {
+  display: flex; /* Use flexbox to create the desired layout */
+  align-items: center; /* Vertically center the content */
+  margin-bottom: 2rem;
+}
+
+.photo-detail img {
+  width: 40%; /* Set the width of the image to 50% to make it bigger */
+  max-height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.caption {
+  flex: 1; /* Let the caption take up the remaining space (50%) */
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 3rem; /* Add some spacing between the image and the caption */
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.back-link {
+  margin-top: 2rem;
+}
+
+.back-link a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}

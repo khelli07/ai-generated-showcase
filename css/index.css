@@ -1,0 +1,72 @@
+/* Hero section styles */
+#hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333; /* Dark text color for hero section */
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Gallery styles */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photo {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+/* Image Card styles */
+.image-card {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background-color: #f5f6fa; /* Light gray background for image cards */
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease; /* Add transition for smooth lifting effect */
+}
+
+/* Lifted effect on hover */
+.image-card:hover {
+  transform: translateY(-5px); /* Lift the image card 5px up */
+}
+
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+  transition: transform 0.3s ease;
+}
+
+/* Caption styles */
+.caption {
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Show caption on hover */
+.image-card:hover .caption {
+  opacity: 1;
+}
+
+.caption h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
