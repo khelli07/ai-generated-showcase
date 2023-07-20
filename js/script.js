@@ -1,5 +1,54 @@
+// Function to load all images and generate the gallery
+function loadImages() {
+  const gallery = document.getElementById("gallery");
+  fetch("data.json")
+    .then((response) => response.json())
+    .then((jsonData) => {
+      jsonData.forEach((photo) => {
+        // Create a new image element
+        const image = document.createElement("img");
+        image.src = "images/" + photo.filename;
+        image.alt = "Photo";
+
+        // Create a new div for the image card
+        const imageCard = document.createElement("div");
+        imageCard.classList.add("photo");
+        imageCard.dataset.photoId = photo.filename.slice(0, -4);
+
+        const imageCardDiv = document.createElement("div");
+        imageCardDiv.classList.add("image-card");
+
+        const captionDiv = document.createElement("div");
+        captionDiv.classList.add("caption");
+
+        const captionHeader = document.createElement("h3");
+        captionHeader.textContent = photo.caption;
+        captionDiv.appendChild(captionHeader);
+
+        const shortDescriptionParagraph = document.createElement("p");
+        shortDescriptionParagraph.textContent = photo.short_description;
+        captionDiv.appendChild(shortDescriptionParagraph);
+
+        // Add the image and caption to the image card
+        imageCardDiv.appendChild(image);
+        imageCardDiv.appendChild(captionDiv);
+
+        imageCard.appendChild(imageCardDiv);
+
+        // Add a click event listener to the image card to open the detail page
+        imageCard.addEventListener("click", () => {
+          window.location.href = `${photo.filename.split(".")[0]}.html`;
+        });
+
+        // Append the image card to the gallery
+        gallery.appendChild(imageCard);
+      });
+    });
+}
+
 // Add an event listener to execute the JavaScript code after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
+  loadImages();
   // Function to handle the hover event on a photo
   function handlePhotoHover(event) {
     const caption = event.currentTarget.querySelector(".caption");
@@ -21,14 +70,5 @@ document.addEventListener("DOMContentLoaded", function () {
   photos.forEach((photo) => {
     photo.addEventListener("mouseenter", handlePhotoHover);
     photo.addEventListener("mouseleave", handlePhotoLeave);
-  });
-});
-
-// Add event listeners to image cards to redirect to the photo_detail.html page
-const imageCards = document.querySelectorAll(".image-card");
-imageCards.forEach((card) => {
-  card.addEventListener("click", () => {
-    const photoId = card.dataset.photoId; // Assuming you have unique IDs for each photo
-    window.location.href = `photo_detail.html?id=${photoId}`;
   });
 });
