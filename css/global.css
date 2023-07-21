@@ -24,9 +24,10 @@ h3 {
 }
 
 /* Header styles */
+/* CSS styles specific to the navbar */
 header {
-  background-color: #0984e3; /* Vibrant blue color for the header */
-  color: #fff; /* White text color */
+  background-color: #333;
+  color: #fff;
   padding: 1rem;
 }
 
@@ -37,7 +38,16 @@ nav {
 }
 
 nav a {
-  color: #fff; /* White navigation link color */
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #bbe3ff; /* Change the color on hover */
 }
 
 /* Main content styles */
