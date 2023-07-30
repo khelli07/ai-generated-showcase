@@ -1,7 +1,6 @@
 // Function to load all images and generate the gallery
 function loadImages(galleryId, jsonFile) {
   const gallery = document.getElementById(galleryId);
-  console.log(gallery);
   fetch(jsonFile)
     .then((response) => response.json())
     .then((jsonData) => {
