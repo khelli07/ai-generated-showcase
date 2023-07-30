@@ -39,7 +39,8 @@ h3 {
 }
 
 .back-link {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
 }
 
 .back-link a {
@@ -50,4 +51,22 @@ h3 {
 
 .back-link a:hover {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .photo-detail img {
+    width: 80%;
+    max-height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .photo-detail {
+    flex-direction: column;
+  }
+
+  .caption {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
 }

@@ -7,11 +7,14 @@
 
 #hero h1 {
   font-size: 3rem;
-  margin-bottom: 1rem;
+}
+
+#hero h3 {
+  font-weight: 500;
 }
 
 /* Gallery styles */
-#gallery {
+.gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -37,6 +40,7 @@
 
 /* Lifted effect on hover */
 .image-card:hover {
+  cursor: pointer;
   transform: translateY(-5px); /* Lift the image card 5px up */
 }
 
@@ -55,7 +59,7 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 95%;
   opacity: 0;
   transition: opacity 0.3s ease;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -69,4 +73,31 @@
 .caption h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+#video-player {
+  text-align: center;
+}
+
+.video-container {
+  display: inline-block;
+  position: relative;
+  max-width: 100%;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  max-width: 80%;
+}
+
+/* Media query for small devices */
+@media screen and (max-width: 768px) {
+  #gallery {
+    grid-template-columns: 1fr; /* Display gallery items as a single column for small devices */
+  }
+
+  video {
+    max-width: 100%;
+  }
 }
