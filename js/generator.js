@@ -9,6 +9,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${caption}</title>
+    <link rel="icon" href="../assets/logo.png" type="image/png" />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/photo_detail.css" />
   </head>
