@@ -93,7 +93,7 @@ video {
 
 /* Media query for small devices */
 @media screen and (max-width: 768px) {
-  #gallery {
+  .gallery {
     grid-template-columns: 1fr; /* Display gallery items as a single column for small devices */
   }
 
