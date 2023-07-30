@@ -16,7 +16,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
   <body>
     <header>
       <nav>
-        <a href="/index.html">Home</a>
+        <a href="/">Home</a>
         <a href="/video.html">Video</a>
         <a href="/about.html">About</a>
       </nav>
@@ -37,7 +37,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
 
       <!-- Back to Main Page link -->
       <div class="back-link">
-        <a href="/index.html">Back to Main Page</a>
+        <a href="/">Back to Main Page</a>
       </div>
     </main>
 
