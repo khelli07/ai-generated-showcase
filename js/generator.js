@@ -8,7 +8,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Photo Detail</title>
+    <title>${caption}</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/photo_detail.css" />
   </head>
@@ -52,7 +52,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
 }
 
 // Read the JSON data from the data.json file
-fs.readFile("data-food.json", "utf8", (err, data) => {
+fs.readFile("data-culture.json", "utf8", (err, data) => {
   if (err) {
     console.error("Error reading data:", err);
   } else {
