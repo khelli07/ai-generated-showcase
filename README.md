@@ -19,7 +19,6 @@ We use 3 technologies here:
     "caption": "Picture Caption: A String",
     "short_description": "This is a short description",
     "long_description": "This is a long description."
-  },
 }
 ```
 
