@@ -1,0 +1,22 @@
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section h1 {
+  color: #333;
+}
+
+ol {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 90%;
+  }
+}

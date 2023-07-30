@@ -17,7 +17,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
       <nav>
         <a href="/index.html">Home</a>
         <a href="/video.html">Video</a>
-        <a href="#about">About</a>
+        <a href="/about.html">About</a>
       </nav>
     </header>
 
