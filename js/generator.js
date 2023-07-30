@@ -9,13 +9,14 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photo Detail</title>
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/photo_detail.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/photo_detail.css" />
   </head>
   <body>
     <header>
       <nav>
-        <!-- Add your navigation links here -->
+        <a href="/index.html">Home</a>
+        <a href="/video.html">Video</a>
         <a href="#about">About</a>
       </nav>
     </header>
@@ -35,13 +36,13 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
 
       <!-- Back to Main Page link -->
       <div class="back-link">
-        <a href="index.html">Back to Main Page</a>
+        <a href="/index.html">Back to Main Page</a>
       </div>
     </main>
 
     <footer>
       <!-- Add your footer content here -->
-      <p>&copy; 2023 Your Name. All rights reserved.</p>
+      <p>&copy; 2023 Magnus - Submission for KORIKA Kreatif AI.</p>
     </footer>
   </body>
 </html>
@@ -51,7 +52,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
 }
 
 // Read the JSON data from the data.json file
-fs.readFile("data.json", "utf8", (err, data) => {
+fs.readFile("data-food.json", "utf8", (err, data) => {
   if (err) {
     console.error("Error reading data:", err);
   } else {
@@ -60,14 +61,14 @@ fs.readFile("data.json", "utf8", (err, data) => {
     // Generate photo detail page for each item in the JSON data
     jsonData.forEach((photo) => {
       const photoDetailPageContent = generatePhotoDetailPage(
-        `images/${photo.filename}`,
+        `../assets/images/${photo.filename}`,
         photo.caption,
         photo.long_description
       );
 
       // Write the HTML content to a file with the photo filename as the file name
       fs.writeFile(
-        `${photo.filename.slice(0, -4)}.html`,
+        `detail/${photo.filename.slice(0, -4)}.html`,
         photoDetailPageContent,
         (err) => {
           if (err) {

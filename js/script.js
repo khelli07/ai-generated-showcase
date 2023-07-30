@@ -1,13 +1,14 @@
 // Function to load all images and generate the gallery
-function loadImages() {
-  const gallery = document.getElementById("gallery");
-  fetch("data.json")
+function loadImages(galleryId, jsonFile) {
+  const gallery = document.getElementById(galleryId);
+  console.log(gallery);
+  fetch(jsonFile)
     .then((response) => response.json())
     .then((jsonData) => {
       jsonData.forEach((photo) => {
         // Create a new image element
         const image = document.createElement("img");
-        image.src = "images/" + photo.filename;
+        image.src = "assets/images/" + photo.filename;
         image.alt = "Photo";
 
         // Create a new div for the image card
@@ -37,7 +38,7 @@ function loadImages() {
 
         // Add a click event listener to the image card to open the detail page
         imageCard.addEventListener("click", () => {
-          window.location.href = `${photo.filename.split(".")[0]}.html`;
+          window.location.href = `detail/${photo.filename.split(".")[0]}.html`;
         });
 
         // Append the image card to the gallery
@@ -48,7 +49,9 @@ function loadImages() {
 
 // Add an event listener to execute the JavaScript code after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  loadImages();
+  loadImages("gallery-food", "data-food.json");
+  loadImages("gallery-culture", "data-culture.json");
+
   // Function to handle the hover event on a photo
   function handlePhotoHover(event) {
     const caption = event.currentTarget.querySelector(".caption");
