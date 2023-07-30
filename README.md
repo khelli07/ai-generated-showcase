@@ -31,7 +31,7 @@ We use 3 technologies here:
 5. Page is ready! You can open it at `index.html`.
 
 
-## Human interverention example
+## Human intervention example
 
 ### Case 1: When error 
 1. We give the error message to the bot and the bot will give the code for fixing it.
