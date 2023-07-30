@@ -52,7 +52,7 @@ function generatePhotoDetailPage(imagePath, caption, longDescription) {
 }
 
 // Read the JSON data from the data.json file
-fs.readFile("data-culture.json", "utf8", (err, data) => {
+fs.readFile("data-food.json", "utf8", (err, data) => {
   if (err) {
     console.error("Error reading data:", err);
   } else {
