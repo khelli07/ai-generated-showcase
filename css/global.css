@@ -78,3 +78,24 @@ footer {
   font-weight: bold;
   flex-shrink: 0;
 }
+
+/* Floating button styles */
+.music-control {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999; /* Set a higher z-index to make it topmost */
+}
+
+button {
+  background-color: #333;
+  color: #f1f1f1;
+  border: none;
+  padding: 20px; /* Adjust the padding to enlarge the button */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 50%;
+}

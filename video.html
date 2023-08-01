@@ -13,6 +13,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
@@ -24,7 +25,14 @@
         <a href="/about.html">About</a>
       </nav>
     </header>
-
+    
+    <!-- Floating button to control music -->
+    <div class="music-control">
+      <button id="musicButton" onclick="toggleMusic">
+        <i class="fas fa-music"></i>
+      </button>
+    </div>
+    
     <main>
       <!-- Video Player Section -->
       <section id="video-player">
@@ -36,6 +44,12 @@
         </div>
       </section>
     </main>
+    
+    <!-- Audio element for the stereo music loop -->
+    <audio id="music" loop>
+      <source src="assets/audio/texttomusic1.wav" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
 
     <footer>
       <!-- Add your footer content here -->
