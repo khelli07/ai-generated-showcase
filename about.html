@@ -57,14 +57,77 @@
           <li>Text-to-text: ChatGPT, Github Co-Pilot</li>
           <li>
             Text-to-image: Midjourney
-            <i>(able to text_and_image-to-image as well)</i>
+            <b>(able to text_and_image-to-image as well)</b>
           </li>
-          <li>Text-to-video: HourOne</li>
+          <li>Text-to-video: HourOne.ai</li>
+          <li>Text-to-audio: TextToMusic.ai</li>
         </ol>
       </section>
       <section>
         <h1>How we made it</h1>
-        <p>We'll add this later :D</p>
+        <p>
+          We have 4 big components that are generated from AI&mdash;that we will
+          cover at its own section.
+        </p>
+        <h3>Website Source Code</h3>
+        <p>
+          We use text-to-text to generate the code of this websites. Questions
+          such as
+        </p>
+        <ol>
+          <li>
+            I want to make an art gallery portfolio, can you give me the folder
+            directory tree for it?
+          </li>
+          <li>Can you generate the index.html and style.css for me?</li>
+          <li>Can you fix the css so the photo is on 3x3 grid?</li>
+        </ol>
+        <p>
+          are prompted iteratively to achieve our current web state.
+          <b>However, do note that</b> human intervention are still needed,
+          especially when the code is not working as intended since we might
+          want to undo it. In addition, prompter also needs to understand the
+          AI's response and instructions for the web to work properly.
+        </p>
+
+        <h3>Pictures and Contents</h3>
+        <p>
+          For the content of images, we use ChatGPT with prompt, more or less,
+          looks like
+        </p>
+        <i
+          >Please give me contents themed “Indonesian food” for showcase, with
+          the following points.
+          <ul>
+            <li>Photo caption</li>
+            <li>Short description</li>
+            <li>Long / detailed description (1 paragraph only)</li>
+          </ul>
+        </i>
+        <p>
+          From this prompt, we use the short description as the input to
+          generate the photo for the gallery. In other words, the flow is
+          <b>
+            prompt to ChatGPT &mdash;> get short description &mdash;> use short
+            description as an input to Midjourney.
+          </b>
+          The photo caption, short description, and long description can be used
+          as the gallery content.
+        </p>
+        <h3>Video</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          praesentium veritatis mollitia est labore recusandae perspiciatis a
+          quidem atque deleniti qui, repellat molestiae aperiam quae officiis
+          beatae, iusto iure vel.
+        </p>
+        <h3>Audio</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+          praesentium veritatis mollitia est labore recusandae perspiciatis a
+          quidem atque deleniti qui, repellat molestiae aperiam quae officiis
+          beatae, iusto iure vel.
+        </p>
       </section>
       <section>
         <h1>Author</h1>

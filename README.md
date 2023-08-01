@@ -10,7 +10,8 @@ We use 3 technologies here:
 
 1. Text-to-text: ChatGPT, Github Co-Pilot
 2. Text-to-image: Midjourney _(able to text_and_image-to-image as well)_
-3. Text-to-video: HourOne
+3. Text-to-video: HourOne.ai
+4. Text-to-audio: TextToMusic.ai
 
 ## How to Use
 
@@ -33,7 +34,10 @@ We use 3 technologies here:
 <source src="assets/videos/<YOUR_VIDEO_NAME>.mp4" type="video/mp4" />
 ```
 
-5. If you want to change the background music, please don't forget to change `index.html` at `line 60`, `video.html` at `line 50`, and `about.html` at `line 80`.
+5. If you want to change the background/stereo music, please don't forget to change `audio` tag element.
+```html
+<source src="assets/audio/<YOUR_AUDIO_NAME>.wav" type="audio/wav" />
+```
 
 6. Page is ready! You can open it at `index.html`.
 
