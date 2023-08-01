@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jajanan Pasar Delights</title>
     <link rel="icon" href="../assets/logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/photo_detail.css" />
   </head>
@@ -16,6 +20,13 @@
         <a href="/about.html">About</a>
       </nav>
     </header>
+
+    <!-- Floating button to control music -->
+    <div class="music-control">
+      <button id="musicButton" onclick="toggleMusic">
+        <i class="fas fa-music"></i>
+      </button>
+    </div>
 
     <!-- The main content of the photo detail page -->
     <main>
@@ -49,9 +60,16 @@
       </div>
     </main>
 
+    <!-- Audio element for the stereo music loop -->
+    <audio id="music" loop>
+      <source src="../assets/audio/texttomusic2.wav" type="audio/wav" />
+      Your browser does not support the audio element.
+    </audio>
+
     <footer>
       <!-- Add your footer content here -->
       <p>&copy; 2023 Magnus - Submission for KORIKA Kreatif AI.</p>
     </footer>
+    <script src="../js/music.js"></script>
   </body>
 </html>
